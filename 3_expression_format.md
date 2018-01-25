@@ -95,6 +95,17 @@ GRACEFULLY._
 <HexDigit>              ::= (a-fA-F0-9)
 <HexPrefix>             ::= {"0x"} {"0X"}
 <GuidValue>             ::= {<RformatGuid>} {<CformatGuid>}
+<UINT8>                 ::= <HexPrefix> (\x0 - \xFF)
+<UINT16>                ::= <HexPrefix> (\x0 - \xFFFF)
+<UINT32>                ::= <HexPrefix> (\x0 - \xFFFFFFFF)
+<UINT64>                ::= <HexPrefix> (\x0 - \xFFFFFFFFFFFFFFFF)
+<ShortNum>              ::= (0-255)
+<IntNum>                ::= (0-65535)
+<LongNum>               ::= (0-4294967295)
+<LongLongNum>           ::= (0-18446744073709551615)
+<GuidStr>               ::= "GUID(" <GuidVal> ")"
+<GuidVal>               ::= {<DblQuote> <RformatGuid> <DblQuote>}
+                            {<CformatGuid>} {<CName>}
 Rhex2                   ::= [<HexDigit>] <HexDigit>
 Rhex4                   ::= [<HexDigit>] [<HexDigit>] Rhex2
 Rhex8                   ::= [<HexDigit>] [<HexDigit>] [<HexDigit>] [<HexDigit>] Rhex4
@@ -113,15 +124,38 @@ Rghex12                 ::= <HexDigit> <HexDigit> <HexDigit> <HexDigit> Rghex8
 <Part3>                 ::= <Byte> <CSP> <Byte> <CSP> <Byte> <CSP> <Part4>
 <Part4>                 ::= <Byte> <CSP> <Byte> <CSP> <Byte> <CSP> <Part5>
 <Part5>                 ::= <Byte> [<TSP>]* "}" [<TSP>]* "}"
-<Array>                 ::= {<EmptyArray>} {<Array>}
+<Array>                 ::= {<EmptyArray>} {<NonEmptyArray>}
 <EmptyArray>            ::= "{" <TSP>* "}"
-<ByteArray>             ::= "{" <TSP>* <Byte> [<CSP> <Byte>]* "}"
+<NonEmptyArray>         ::= "{" <TSP>* [<Lable>] <ArrayVal> 
+                             [<CSP> [<Lable>] <ArrayVal>]* "}"
+<ArrayVal>              ::= {<Num8Array>} {<GuidStr>} {<DevicePath>}
+<DevicePath>            ::= "DEVICE_PATH(" <DevicePathStr> ")"
+<DevicePathStr>         ::= A double quoted string that follow the device path
+                            as string format defined in UEFI Specification 2.6
+                            Section 9.6
+<Lable>                 ::= "LABEL(" <CName> ")"
+<Offset>                ::= "OFFSET_OF(" <CName> ")"
 <StringLiteral>         ::= {<QuotedString>} {"L" <QuotedString>}
+                            {<SglQuotedString>} {"L" <SglQuotedString>}
 <DblQuote>              ::= 0x22
+<SglQuote>              ::= 0x27
 <QuotedString>          ::= <DblQuote> [<CCHAR>]* <DblQuote>
+<SglQuotedString>       ::= <SglQuote> [<CCHAR>]* <SglQuote>
 <CCHAR>                 ::= {<SingleChars>} {<EscapeCharSeq>}
-<SingleChars>           ::= {0x20} {0x21} {(0x23 - 0x5B)} {(0x5D - 0x7E)}
-<EscapeCharSeq>         ::= "\" {"n"} {"r"} {"t"} {"f"} {"b"} {"0"} {"\"} {<DblQuote>}
+<SingleChars>           ::= {0x21} {(0x23 - 0x26)} {(0x28 - 0x5B)}
+                            {(0x5D - 0x7E)} {<EscapeSequence>}
+<EscapeCharSeq>         ::= "\" {"n"} {"r"} {"t"} {"f"} {"b"} {"0"} {"\"}
+                            {<DblQuote>} {<SglQuote>}
+<NonNumType>            ::= {<TrueFalse>} {<StringLiteral>} {<Offset>} {<UintMac>}
+<Num8Array>             ::= {<NonNumType>} {<ShortNum>} {<UINT8>}
+<Num16Array>            ::= {<NonNumType>} {<IntNum>} {<UINT16>}
+<Num32Array>            ::= {<NonNumType>} {<LongNum>} {<UINT32>}
+<Num64Array>            ::= {<NonNumType>} {<LongLongNum>} {<UINT64>}
+<UintMac>               ::= {<Uint8Mac>} {<Uint16Mac>} {<Uint32Mac>} {<Uint64Mac>}
+<Uint8Mac>              ::= "UINT8(" <Num8Array> ")"
+<Uint16Mac>             ::= "UINT16(" <Num16Array> ")"
+<Uint32Mac>             ::= "UINT32(" <Num32Array> ")"
+<Uint64Mac>             ::= "UINT64(" <Num64Array> ")"
 <PostFixExpression>     ::= {<PrimaryExpression>} {<PcdName>}
 <PcdName>               ::= <CName> "." <CName>
 <UnaryExpression>       ::= {<PostFixExpression>} {<UnaryOp> <UnaryExpression>}
@@ -189,8 +223,14 @@ This is the value of the MACRO assigned in a DEFINE statement.
 
 **Expressions**
 
-If the "|" character is used in an expression, the expression must be
+If the "|" or "||"character is used in an expression, the expression must be
 encapsulated by parenthesis.
+
+**OFFSET_OF()**
+
+LABEL() macro in byte arrays to tag the byte offset of a location in a byte
+array. OFFSET_OF() macro in byte arrays that returns the byte offset of a
+LABEL() declared in a byte array.
 
 ## 3.2 Conditional Directive Expressions
 

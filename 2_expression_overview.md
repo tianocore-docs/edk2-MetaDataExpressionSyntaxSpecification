@@ -102,3 +102,6 @@ directives section do not apply.
 13. For the Conditional Operator, the first operand must be scalar, while the
     second and third operands must have the same type (i.e., both being scalar,
     both being integers, or both being string literals).
+
+14. Array format like "{0x10, 0x20}" can't be a operand of any operator except
+    Relational and equality operators.
