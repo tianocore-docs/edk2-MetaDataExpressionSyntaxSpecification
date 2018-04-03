@@ -1,7 +1,7 @@
 <!--- @file
   README.md for EDK II Meta-Data Expression Syntax Specification
 
-  Copyright (c) 2014-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2014-2018, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -72,7 +72,7 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
 OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
 ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-Copyright (c) 2014-2017, Intel Corporation. All rights reserved.
+Copyright (c) 2014-2018, Intel Corporation. All rights reserved.
 
 
 ### Revision History
@@ -82,3 +82,4 @@ Copyright (c) 2014-2017, Intel Corporation. All rights reserved.
 | 1.0        | Initial Release    | September 2014 |
 | 1.1        |                    | September 2014 |
 | 1.2        | Convert to Gitbook | April 2017     |
+| 1.3        | Flexible Pcd format| Mar 2018       |
