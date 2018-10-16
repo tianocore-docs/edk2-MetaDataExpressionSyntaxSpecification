@@ -1,7 +1,7 @@
 <!--- @file
   2 Expression Overview
 
-  Copyright (c) 2014-2017, Intel Corporation. All rights reserved.<BR>
+  Copyright (c) 2014-2018, Intel Corporation. All rights reserved.<BR>
 
   Redistribution and use in source (original document form) and 'compiled'
   forms (converted to PDF, epub, HTML and other formats) with or without
@@ -83,10 +83,13 @@ directives section do not apply.
     arithmetic in type.
 
 11. Relational and equality operators require both operands to be of the same
-    type. Relational comparison on string literals and byte arrays must be
-    performed comparing the byte values, left to right. The first pair of bytes
-    (or a single extra byte) that is not equal will determine the result of the
-    comparison. The following are examples of string comparisons:
+    type. The single quote string and double quote string are same type as
+    general string, while the string start with `L` character is the unicode
+    string. Unicode string should not compare with general string. Relational
+    comparison on string literals and byte arrays must be performed comparing
+    the byte values, left to right. The first pair of bytes (or a single extra
+    byte) that is not equal will determine the result of the comparison. The
+    following are examples of string comparisons:
     ```
     Foo = "zero", Bar = "three";
     ```
