@@ -4,7 +4,6 @@
     "title"   : "EDK II Meta-Data Expression Syntax Specification",
     "version" : "Revision 1.2"
   },
-
-  "plugins": ["puml"],
+  "plugins": ["puml-aleung"],
   "pluginsConfig": {}
 }
