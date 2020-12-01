@@ -1,0 +1,746 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3 Expression Format · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="3_expression_format.html" />
+    
+    
+    <link rel="prev" href="2_expression_overview.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./#edk-ii-meta-data-expression-syntax-specification">
+            
+                    
+                    EDK II Meta-Data Expression Syntax Specification
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1_introduction/">
+            
+                <a href="1_introduction/#1-introduction">
+            
+                    
+                    1 Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="1_introduction/11_overview.html">
+            
+                <a href="1_introduction/11_overview.html#11-overview">
+            
+                    
+                    1.1 Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="1_introduction/12_related_information.html">
+            
+                <a href="1_introduction/12_related_information.html#12-related-information">
+            
+                    
+                    1.2 Related Information
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="1_introduction/13_terms.html">
+            
+                <a href="1_introduction/13_terms.html#13-terms">
+            
+                    
+                    1.3 Terms
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="1_introduction/14_target_audience.html">
+            
+                <a href="1_introduction/14_target_audience.html#14-target-audience">
+            
+                    
+                    1.4 Target Audience
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="1_introduction/15_conventions_used_in_this_document.html">
+            
+                <a href="1_introduction/15_conventions_used_in_this_document.html#15-conventions-used-in-this-document">
+            
+                    
+                    1.5 Conventions Used in this Document
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2_expression_overview.html">
+            
+                <a href="2_expression_overview.html#2-expression-overview">
+            
+                    
+                    2 Expression Overview
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="2_expression_overview.html">
+            
+                <a href="2_expression_overview.html#21-constraints-and-semantics">
+            
+                    
+                    2.1 Constraints and Semantics
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="3_expression_format.html">
+            
+                <a href="3_expression_format.html#3-expression-format">
+            
+                    
+                    3 Expression Format
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="3_expression_format.html">
+            
+                <a href="3_expression_format.html#31-data-field-expression">
+            
+                    
+                    3.1 Data Field Expression
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="3_expression_format.html">
+            
+                <a href="3_expression_format.html#32-conditional-directive-expressions">
+            
+                    
+                    3.2 Conditional Directive Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="appendix_a_abnf_syntax.html">
+            
+                <a href="appendix_a_abnf_syntax.html#appendix-a-abnf-syntax">
+            
+                    
+                    Appendix A ABNF Syntax
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="appendix_a_abnf_syntax.html">
+            
+                <a href="appendix_a_abnf_syntax.html#a1-data-field-expression-abnf">
+            
+                    
+                    A.1 Data Field Expression ABNF
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="appendix_a_abnf_syntax.html">
+            
+                <a href="appendix_a_abnf_syntax.html#a2-conditional-directive-expression-abnf">
+            
+                    
+                    A.2 Conditional Directive Expression ABNF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    Tables
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="1_introduction/15_conventions_used_in_this_document.html">
+            
+                <a href="1_introduction/15_conventions_used_in_this_document.html#table-1-font-conventions">
+            
+                    
+                    Table 1 Font Conventions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="1_introduction/15_conventions_used_in_this_document.html">
+            
+                <a href="1_introduction/15_conventions_used_in_this_document.html#table-2-ebnf-conventions">
+            
+                    
+                    Table 2 EBNF Conventions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >3 Expression Format</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Meta-Data Expression Syntax Specification</div>
+        <div style="text-align:right">Revision 1.3</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  3 Expression Format
+
+  Copyright (c) 2014-2017, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<h1 id="3-expression-format">3 Expression Format</h1>
+<p>The following EBNF describes the syntax and precedence of EDK II meta-data
+expression notation.</p>
+<ol>
+<li><p>An Expression is a sequence of operators and operands that specifies a
+computational value, or that designates an object (or a function), or that
+performs a combination thereof.</p>
+</li>
+<li><p>Statements in nested parenthesis are evaluated inside to outside.</p>
+</li>
+<li><p>Statements in parenthesis are evaluated prior to evaluating statements
+outside of parenthesis.</p>
+</li>
+<li><p>Operators within a grouping (as designated by the name preceding the &quot;::=&quot;
+character sequence) are evaluated left to right.</p>
+</li>
+<li><p>The syntax is listed in precedence order (high to low).</p>
+</li>
+<li><p>The syntax does not define acceptable values of a data field; those are
+defined in the EDK II meta-data documents that define the data fields.</p>
+</li>
+</ol>
+<h2 id="31-data-field-expression">3.1 Data Field Expression</h2>
+<p>The following expression syntax may be used in a data field in EDK II Meta-data
+documents. All text inclusive of a semi-colon character through the end of the
+line must be viewed as a comment to the content preceding the semi-colon
+character. The use of a semi-colon character as a comment delimiter is for this
+specification only; other specifications may use different characters as
+comment delimiters.</p>
+<h4 id="restrictions">Restrictions</h4>
+<p><strong><code>&lt;Function&gt;</code></strong></p>
+<p><em>FUNCTIONS SHOULD ONLY BE USED IF ALL TOOLS THAT PROCESS THE ENTRY IN THE
+META-DATA FILE COMPREHEND THE FUNCTION SYNTAX AND THE FUNCTION ELEMENT HAS
+BEEN DEFINED IN A HIGH LEVEL DESIGN DOCUMENT OR SOFTWARE ARCHITECTURE
+SPECIFICATION</em>.</p>
+<p><em>IF A TOOL DOES NOT COMPREHEND THE FUNCTION FORMAT, THE TOOL SHOULD FAIL
+GRACEFULLY.</em></p>
+<h4 id="prototype">Prototype</h4>
+<pre><code class="lang-c">&lt;PrimaryExpression&gt;     ::= {&lt;Identifier&gt;} {&lt;Constant&gt;} {&lt;StringLiteral&gt;} {&lt;Function&gt;}
+                            {&quot;(&quot; &lt;Expression&gt; &quot;)&quot;} {&lt;Expression&gt;}
+&lt;Identifier&gt;            ::= {&lt;CName&gt;} {&lt;MACROVAL&gt;}
+&lt;MACROVAL&gt;              ::= &quot;$(&quot; &lt;MACRO&gt; &quot;)&quot;
+&lt;MACRO&gt;                 ::= (A-Z) [(A-Z0-9_)]*
+&lt;Function&gt;              ::= &lt;CName&gt; &quot;(&quot; &lt;Argument&gt; [&lt;CSP&gt; &lt;Argument&gt;]* &quot;)&quot;
+&lt;Argument&gt;              ::= &lt;PrimaryExpression&gt;
+&lt;CName&gt;                 ::= (a-zA-Z_) [(a-zA-Z0-9_)]*
+&lt;Constant&gt;              ::= {&lt;TrueFalse&gt;} {&lt;Number&gt;} {&lt;GuidValue&gt;} {&lt;Array&gt;}
+&lt;TrueFalse&gt;             ::= {&lt;True&gt;} {&lt;False&gt;}
+&lt;True&gt;                  ::= {&quot;TRUE&quot;} {&quot;True&quot;} {&quot;true&quot;}
+&lt;False&gt;                 ::= {&quot;FALSE&quot;} {&quot;False&quot;} {&quot;false&quot;}
+&lt;Number&gt;                ::= {&lt;Integer&gt;} {&lt;HexNumber&gt;}
+&lt;Integer&gt;               ::= &lt;Base10&gt;
+&lt;Base10&gt;                ::= {(0-9)} {(1-9) [(0-9)]*}
+&lt;HexNumber&gt;             ::= &lt;Base16&gt;
+&lt;Base16&gt;                ::= &lt;HexPrefix&gt; [&lt;HexDigit&gt;]+
+&lt;HexDigit&gt;              ::= (a-fA-F0-9)
+&lt;HexPrefix&gt;             ::= {&quot;0x&quot;} {&quot;0X&quot;}
+&lt;GuidValue&gt;             ::= {&lt;RformatGuid&gt;} {&lt;CformatGuid&gt;}
+&lt;UINT8&gt;                 ::= &lt;HexPrefix&gt; (\x0 - \xFF)
+&lt;UINT16&gt;                ::= &lt;HexPrefix&gt; (\x0 - \xFFFF)
+&lt;UINT32&gt;                ::= &lt;HexPrefix&gt; (\x0 - \xFFFFFFFF)
+&lt;UINT64&gt;                ::= &lt;HexPrefix&gt; (\x0 - \xFFFFFFFFFFFFFFFF)
+&lt;ShortNum&gt;              ::= (0-255)
+&lt;IntNum&gt;                ::= (0-65535)
+&lt;LongNum&gt;               ::= (0-4294967295)
+&lt;LongLongNum&gt;           ::= (0-18446744073709551615)
+&lt;GuidStr&gt;               ::= &quot;GUID(&quot; &lt;GuidVal&gt; &quot;)&quot;
+&lt;GuidVal&gt;               ::= {&lt;DblQuote&gt; &lt;RformatGuid&gt; &lt;DblQuote&gt;}
+                            {&lt;CformatGuid&gt;} {&lt;CName&gt;}
+Rhex2                   ::= [&lt;HexDigit&gt;] &lt;HexDigit&gt;
+Rhex4                   ::= [&lt;HexDigit&gt;] [&lt;HexDigit&gt;] Rhex2
+Rhex8                   ::= [&lt;HexDigit&gt;] [&lt;HexDigit&gt;] [&lt;HexDigit&gt;] [&lt;HexDigit&gt;] Rhex4
+&lt;RformatGuid&gt;           ::= Rghex8 &quot;-&quot; Rghex4 &quot;-&quot; Rghex4 &quot;-&quot; Rghex4 &quot;-&quot; Rghex12
+Rghex2                  ::= &lt;HexDigit&gt; &lt;HexDigit&gt;
+Rghex4                  ::= &lt;HexDigit&gt; &lt;HexDigit&gt; Rghex2
+Rghex8                  ::= &lt;HexDigit&gt; &lt;HexDigit&gt; &lt;HexDigit&gt; &lt;HexDigit&gt; Rghex4
+Rghex12                 ::= &lt;HexDigit&gt; &lt;HexDigit&gt; &lt;HexDigit&gt; &lt;HexDigit&gt; Rghex8
+&lt;Byte&gt;                  ::= &lt;HexPrefix&gt; Rhex2
+&lt;Hex16&gt;                 ::= &lt;HexPrefix&gt; Rhex4
+&lt;Hex32&gt;                 ::= &lt;HexPrefix&gt; Rhex8
+&lt;CSP&gt;                   ::= 0x2c [&lt;TSP&gt;]*
+&lt;TSP&gt;                   ::= {0x20} {0x09}
+&lt;CformatGuid&gt;           ::= &quot;{&quot; [&lt;TSP&gt;]* &lt;Hex32&gt; &lt;CSP&gt; &lt;Hex16&gt; &lt;CSP&gt; &lt;Part2&gt;
+&lt;Part2&gt;                 ::= &lt;Hex16&gt; &lt;CSP&gt; &quot;{&quot; [&lt;TSP&gt;]* &lt;Byte&gt; &lt;CSP&gt; &lt;Part3&gt;
+&lt;Part3&gt;                 ::= &lt;Byte&gt; &lt;CSP&gt; &lt;Byte&gt; &lt;CSP&gt; &lt;Byte&gt; &lt;CSP&gt; &lt;Part4&gt;
+&lt;Part4&gt;                 ::= &lt;Byte&gt; &lt;CSP&gt; &lt;Byte&gt; &lt;CSP&gt; &lt;Byte&gt; &lt;CSP&gt; &lt;Part5&gt;
+&lt;Part5&gt;                 ::= &lt;Byte&gt; [&lt;TSP&gt;]* &quot;}&quot; [&lt;TSP&gt;]* &quot;}&quot;
+&lt;Array&gt;                 ::= {&lt;EmptyArray&gt;} {&lt;NonEmptyArray&gt;}
+&lt;EmptyArray&gt;            ::= &quot;{&quot; &lt;TSP&gt;* &quot;}&quot;
+&lt;NonEmptyArray&gt;         ::= &quot;{&quot; &lt;TSP&gt;* [&lt;Lable&gt;] &lt;ArrayVal&gt; 
+                             [&lt;CSP&gt; [&lt;Lable&gt;] &lt;ArrayVal&gt;]* &quot;}&quot;
+&lt;ArrayVal&gt;              ::= {&lt;Num8Array&gt;} {&lt;GuidStr&gt;} {&lt;DevicePath&gt;}
+&lt;DevicePath&gt;            ::= &quot;DEVICE_PATH(&quot; &lt;DevicePathStr&gt; &quot;)&quot;
+&lt;DevicePathStr&gt;         ::= A double quoted string that follow the device path
+                            as string format defined in UEFI Specification 2.6
+                            Section 9.6
+&lt;Lable&gt;                 ::= &quot;LABEL(&quot; &lt;CName&gt; &quot;)&quot;
+&lt;Offset&gt;                ::= &quot;OFFSET_OF(&quot; &lt;CName&gt; &quot;)&quot;
+&lt;StringLiteral&gt;         ::= {&lt;QuotedString&gt;} {&quot;L&quot; &lt;QuotedString&gt;}
+                            {&lt;SglQuotedString&gt;} {&quot;L&quot; &lt;SglQuotedString&gt;}
+&lt;DblQuote&gt;              ::= 0x22
+&lt;SglQuote&gt;              ::= 0x27
+&lt;QuotedString&gt;          ::= &lt;DblQuote&gt; [&lt;CCHAR&gt;]* &lt;DblQuote&gt;
+&lt;SglQuotedString&gt;       ::= &lt;SglQuote&gt; [&lt;CCHAR&gt;]* &lt;SglQuote&gt;
+&lt;CCHAR&gt;                 ::= {&lt;SingleChars&gt;} {&lt;EscapeCharSeq&gt;}
+&lt;SingleChars&gt;           ::= {0x21} {(0x23 - 0x26)} {(0x28 - 0x5B)}
+                            {(0x5D - 0x7E)} {&lt;EscapeSequence&gt;}
+&lt;EscapeCharSeq&gt;         ::= &quot;\&quot; {&quot;n&quot;} {&quot;r&quot;} {&quot;t&quot;} {&quot;f&quot;} {&quot;b&quot;} {&quot;0&quot;} {&quot;\&quot;}
+                            {&lt;DblQuote&gt;} {&lt;SglQuote&gt;}
+&lt;NonNumType&gt;            ::= {&lt;TrueFalse&gt;} {&lt;StringLiteral&gt;} {&lt;Offset&gt;} {&lt;UintMac&gt;}
+&lt;Num8Array&gt;             ::= {&lt;NonNumType&gt;} {&lt;ShortNum&gt;} {&lt;UINT8&gt;}
+&lt;Num16Array&gt;            ::= {&lt;NonNumType&gt;} {&lt;IntNum&gt;} {&lt;UINT16&gt;}
+&lt;Num32Array&gt;            ::= {&lt;NonNumType&gt;} {&lt;LongNum&gt;} {&lt;UINT32&gt;}
+&lt;Num64Array&gt;            ::= {&lt;NonNumType&gt;} {&lt;LongLongNum&gt;} {&lt;UINT64&gt;}
+&lt;UintMac&gt;               ::= {&lt;Uint8Mac&gt;} {&lt;Uint16Mac&gt;} {&lt;Uint32Mac&gt;} {&lt;Uint64Mac&gt;}
+&lt;Uint8Mac&gt;              ::= &quot;UINT8(&quot; &lt;Num8Array&gt; &quot;)&quot;
+&lt;Uint16Mac&gt;             ::= &quot;UINT16(&quot; &lt;Num16Array&gt; &quot;)&quot;
+&lt;Uint32Mac&gt;             ::= &quot;UINT32(&quot; &lt;Num32Array&gt; &quot;)&quot;
+&lt;Uint64Mac&gt;             ::= &quot;UINT64(&quot; &lt;Num64Array&gt; &quot;)&quot;
+&lt;PostFixExpression&gt;     ::= {&lt;PrimaryExpression&gt;} {&lt;PcdName&gt;}
+&lt;PcdName&gt;               ::= &lt;CName&gt; &quot;.&quot; &lt;CName&gt;
+&lt;UnaryExpression&gt;       ::= {&lt;PostFixExpression&gt;} {&lt;UnaryOp&gt; &lt;UnaryExpression&gt;}
+&lt;UnaryOp&gt;               ::= {&lt;IntegerOps&gt;} {&lt;ScalarOps&gt;}
+&lt;IntegerOps&gt;            ::= {&quot;+&quot;} {&quot;-&quot;} {&quot;~&quot;}
+&lt;ScalarOps&gt;             ::= {&quot;NOT&quot;} {&quot;not&quot;} {&quot;!&quot;}
+&lt;MultiplicativeExpress&gt; ::= {&lt;UnaryExpression&gt;}
+                            {&lt;MultiplicativeExpress&gt; &lt;TSP&gt;* &quot;*&quot; &lt;TSP&gt;* &lt;UnaryExpression&gt;}
+                            {&lt;MultiplicativeExpress&gt; &lt;TSP&gt;* &quot;/&quot; &lt;TSP&gt;* &lt;UnaryExpression&gt;}
+                            {&lt;MultiplicativeExpress&gt; &lt;TSP&gt;* &quot;%&quot; &lt;TSP&gt;* &lt;UnaryExpression&gt;}
+&lt;AdditiveExpress&gt;       ::= {&lt;MultiplicativeExpress&gt;}
+                            {&lt;AdditiveExpress&gt; &lt;TSP&gt;* &quot;+&quot; &lt;TSP&gt;* &lt;MultiplicativeExpress&gt;}
+                            {&lt;AdditiveExpress&gt; &lt;TSP&gt;* &quot;-&quot; &lt;TSP&gt;* &lt;MultiplicativeExpress&gt;}
+&lt;ShiftExpression&gt;       ::= {&lt;AdditiveExpress&gt;}
+                            {&lt;ShiftExpression&gt; &lt;TSP&gt;* &quot;&lt;&lt;&quot; &lt;TSP&gt;* &lt;AdditiveExpress&gt;}
+                            {&lt;ShiftExpression&gt; &lt;TSP&gt;* &quot;&gt;&gt;&quot; &lt;TSP&gt;* &lt;AdditiveExpress&gt;}
+&lt;RelationalExpress&gt;     ::= {&lt;ShiftExpression&gt;}
+                            {&lt;RelationalExpress&gt;} &lt;TSP&gt;* &quot;&lt;&quot; &lt;TSP&gt;* &lt;ShiftExpress&gt;}
+                            {&lt;RelationalExpress&gt;} &lt;TSP&gt;* &quot;LT&quot; &lt;TSP&gt;* &lt;ShiftExpress&gt;}
+                            {&lt;RelationalExpress&gt;} &lt;TSP&gt;* &quot;&gt;&quot; &lt;TSP&gt;* &lt;ShiftExpress&gt;}
+                            {&lt;RelationalExpress&gt;} &lt;TSP&gt;* &quot;GT&quot; &lt;TSP&gt;* &lt;ShiftExpress&gt;}
+                            {&lt;RelationalExpress&gt;} &lt;TSP&gt;* &quot;&lt;=&quot; &lt;TSP&gt;* &lt;ShiftExpress&gt;}
+                            {&lt;RelationalExpress&gt;} &lt;TSP&gt;* &quot;LE&quot; &lt;TSP&gt;* &lt;ShiftExpress&gt;}
+                            {&lt;RelationalExpress&gt;} &lt;TSP&gt;* &quot;&gt;=&quot; &lt;TSP&gt;* &lt;ShiftExpress&gt;}
+                            {&lt;RelationalExpress&gt;} &lt;TSP&gt;* &quot;GE&quot; &lt;TSP&gt;* &lt;ShiftExpress&gt;}
+&lt;EqualityExpression&gt;    ::= {&lt;RelationalExpress&gt;}
+                            {&lt;EqualityExpression&gt; &lt;TSP&gt;* &quot;==&quot; &lt;TSP&gt;* &lt;RelationalExpress&gt;}
+                            {&lt;EqualityExpression&gt; &lt;TSP&gt;* &quot;EQ&quot; &lt;TSP&gt;* &lt;RelationalExpress&gt;}
+                            {&lt;EqualityExpression&gt; &lt;TSP&gt;* &quot;!=&quot; &lt;TSP&gt;* &lt;RelationalExpress&gt;}
+                            {&lt;EqualityExpression&gt; &lt;TSP&gt;* &quot;NE&quot; &lt;TSP&gt;* &lt;RelationalExpress&gt;}
+&lt;BitwiseAndExpression&gt;  ::= {&lt;EqualityExpression&gt;}
+                            {&lt;BitwiseAndExpression&gt; &lt;TSP&gt;* &quot;&amp;&quot; &lt;TSP&gt;* &lt;EqualityExpression&gt;}
+&lt;BitwiseXorExpress&gt;     ::= {&lt;BitwiseAndExpression&gt;}
+                            {&lt;BitwiseXorExpress&gt; &lt;TSP&gt;* &quot;^&quot; &lt;TSP&gt;* &lt;BitwiseAndExpression&gt;}
+&lt;BitwiseOrExpress&gt;      ::= {&lt;BitwiseXorExpress&gt;}
+                            {&quot;(&quot; &lt;BitwiseOrExpress&gt; &lt;TSP&gt;* &quot;|&quot; &lt;TSP&gt;* &lt;BitwiseXorExpress&gt; &quot;)&quot;}
+&lt;LogicalAndExpress&gt;     ::= {&lt;BitwiseOrExpress&gt;}
+                            {&lt;LogicalAndExpress&gt; &lt;TSP&gt;* &quot;&amp;&amp;&quot; &lt;TSP&gt;* &lt;BitwiseOrExpress&gt;}
+                            {&lt;LogicalAndExpress&gt; &lt;TSP&gt;* &quot;AND&quot; &lt;TSP&gt;* &lt;BitwiseOrExpress&gt;}
+                            {&lt;LogicalAndExpress&gt; &lt;TSP&gt;* &quot;and&quot; &lt;TSP&gt;* &lt;BitwiseOrExpress&gt;}
+&lt;LogicalXorExpress&gt;     ::= {&lt;LogicalAndExpress&gt;}
+                            {&lt;LogicalAndExpress&gt; &lt;TSP&gt;* &quot;XOR&quot; &lt;TSP&gt;* &lt;LogicalXorExpress&gt;}
+                            {&lt;LogicalAndExpress&gt; &lt;TSP&gt;* &quot;xor&quot; &lt;TSP&gt;* &lt;LogicalXorExpress&gt;}
+&lt;LogicalOrExpress&gt;      ::= {&lt;LogicalXorExpress&gt;}
+                            {&quot;(&quot; &lt;LogicalXorExpress&gt; &lt;TSP&gt;* &quot;||&quot; &lt;TSP&gt;* &lt;LogicalOrExpress&gt; &quot;)&quot;}
+                            {&lt;LogicalXorExpress&gt; &lt;TSP&gt;* &quot;OR&quot; &lt;TSP&gt;* &lt;LogicalOrExpress&gt;}
+                            {&lt;LogicalXorExpress&gt; &lt;TSP&gt;* &quot;or&quot; &lt;TSP&gt;* &lt;LogicalOrExpress&gt;}
+&lt;CondExpress&gt;           ::= {&lt;LogicalOrExpress&gt;}
+                            {&lt;LogicalOrExpress&gt; &lt;TSP&gt;* &quot;?&quot; &lt;IsTrue&gt; &quot;:&quot; &lt;TSP&gt;* &lt;CondExpress&gt;
+&lt;IsTrue&gt;                ::= &lt;TSP&gt;* &lt;Expression&gt; &lt;TSP&gt;*
+&lt;Expression&gt;            ::= {&lt;CondExpress&gt;} {&lt;Expression&gt;}
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-ini">gUefiCpuPkgTokenSpaceGuid.PcdCpuLocalApicBaseAddress | !gCrownBayTokenSpaceGuid.PcdProgrammableLocalApic
+</code></pre>
+<h4 id="notes">Notes</h4>
+<p><strong>MACROVAL</strong></p>
+<p>This is the value of the MACRO assigned in a DEFINE statement.</p>
+<p><strong>Expressions</strong></p>
+<p>If the &quot;|&quot; or &quot;||&quot;character is used in an expression, the expression must be
+encapsulated by parenthesis.</p>
+<p><strong>OFFSET_OF()</strong></p>
+<p>LABEL() macro in byte arrays to tag the byte offset of a location in a byte
+array. OFFSET_OF() macro in byte arrays that returns the byte offset of a
+LABEL() declared in a byte array.</p>
+<h2 id="32-conditional-directive-expressions">3.2 Conditional Directive Expressions</h2>
+<p>Conditional directive statements are defined in the EDK II Platform Description
+(DSC) File and Flash Definition (FDF) File. The following EBNF describes the
+format for expressions used in conditional directives. The format is based on
+section 6.10 of the ANSI C-99 Specification.</p>
+<h4 id="restrictions">Restrictions</h4>
+<p><strong>ConstantExpression</strong></p>
+<p>The ConstantExpression in the !if statement must evaluate to either True (1) or
+False (0).</p>
+<h4 id="prototype">Prototype</h4>
+<pre><code class="lang-c">&lt;EOL&gt;                ::= <span class="hljs-number">0x0D</span> <span class="hljs-number">0x0A</span>
+&lt;TSP&gt;                ::= {<span class="hljs-number">0x20</span>} {<span class="hljs-number">0x09</span>}
+&lt;Group&gt;              ::= {&lt;GroupPart&gt;} {&lt;Group&gt; &lt;GroupPart&gt;}
+&lt;GroupPart&gt;          ::= {&lt;IfSection&gt;} {&lt;TextLine&gt;}
+&lt;IfSection&gt;          ::= &lt;IfGroup&gt; [&lt;ElifGroups&gt;] [&lt;ElseGroup&gt;] &lt;EndIfLine&gt;
+&lt;IfGroup&gt;            ::= {&lt;TSP&gt;* <span class="hljs-string">&quot;!if&quot;</span> &lt;TSP&gt;+ &lt;ConstantExpression&gt; &lt;EOL&gt; [&lt;Group&gt;]
+                         {&lt;TSP&gt;* <span class="hljs-string">&quot;!ifdef&quot;</span> &lt;TSP&gt;+ &lt;MACROorMACROVAL&gt; &lt;EOL&gt; [&lt;Group&gt;]
+                         {&lt;TSP&gt;* <span class="hljs-string">&quot;!ifndef&quot;</span> &lt;TSP&gt;+ &lt;MACROorMACROVAL&gt; &lt;EOL&gt; [&lt;Group&gt;]
+&lt;MACROorMACROVAL&gt;    ::= {&lt;MACRO&gt;} {<span class="hljs-string">&quot;$(&quot;</span> &lt;MACRO&gt; <span class="hljs-string">&quot;)&quot;</span>}
+&lt;ElifGroup&gt;          ::= {&lt;ElifGroup&gt;} {&lt;ElifGroups&gt; &lt;ElifGroup&gt;}
+&lt;ElifGroup&gt;          ::= &lt;TSP&gt;* <span class="hljs-string">&quot;!elif&quot;</span> &lt;TSP&gt;* &lt;ConstantExpression&gt; &lt;EOL&gt; [&lt;Group&gt;]
+&lt;ElseGroup&gt;          ::= &lt;TSP&gt;* <span class="hljs-string">&quot;!else&quot;</span> &lt;TSP&gt;* &lt;EOL&gt; [&lt;Group&gt;]
+&lt;EndIfLine&gt;          ::= &lt;TSP&gt;* <span class="hljs-string">&quot;!endif&quot;</span> &lt;EOL&gt;
+&lt;TextLine&gt;           ::= Content specific to the meta-data file
+&lt;ConstantExpression&gt; ::= &lt;CondExpress&gt; ; see Data Field Expression definitions
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-ini">!if $(LOGGING)
+  DebugLib|IntelFrameworkModulePkg/Library/PeiDxeDebugLibReportStatusCode/PeiDxeDebugLibReportStatusCode.inf
+  DebugPrintErrorLevelLib|MdePkg/Library/BaseDebugPrintErrorLevelLib/BaseDebugPrintErrorLevelLib.inf
+!else
+  DebugLib|MdePkg/Library/BaseDebugLibNull/BaseDebugLibNull.inf
+!endif
+
+!if $(LOGGING) == FALSE
+  gEfiMdePkgTokenSpaceGuid.PcdDebugPropertyMask|0x0
+  gEfiMdePkgTokenSpaceGuid.PcdReportStatusCodePropertyMask|0x3
+!endif
+</code></pre>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Meta-Data Expression Syntax Specification</div>
+        <div style="text-align:right">Revision 1.3</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                <a href="2_expression_overview.html#21-constraints-and-semantics" class="navigation navigation-prev " aria-label="Previous page: 2.1 Constraints and Semantics">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="3_expression_format.html#31-data-field-expression" class="navigation navigation-next " aria-label="Next page: 3.1 Data Field Expression">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3 Expression Format","level":"1.4","depth":1,"next":{"title":"3.1 Data Field Expression","level":"1.4.1","depth":2,"anchor":"#31-data-field-expression","path":"3_expression_format.md","ref":"3_expression_format.md#31-data-field-expression","articles":[]},"previous":{"title":"2.1 Constraints and Semantics","level":"1.3.1","depth":2,"anchor":"#21-constraints-and-semantics","path":"2_expression_overview.md","ref":"2_expression_overview.md#21-constraints-and-semantics","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"title":"EDK II Meta-Data Expression Syntax Specification","version":"Revision 1.3"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3_expression_format.md","mtime":"2020-12-01T05:47:06.810Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-01T05:47:34.711Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
